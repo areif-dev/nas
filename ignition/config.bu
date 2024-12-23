@@ -1,4 +1,3 @@
----
 variant: fcos
 version: 1.5.0
 
@@ -32,12 +31,17 @@ systemd:
 storage:
   raid: 
     - name: bulk
-      level: "raid5"
+      level: raid5
       devices:
-        - "/dev/sda"
-        - "/dev/sdb"
-        - "/dev/sdc"
-        - "/dev/sdd"
+        - /dev/sda
+        - /dev/sdb
+        - /dev/sdc
+        - /dev/sdd
+  filesystems:
+    - device: /dev/md/bulk
+      format: xfs 
+      wipe_filesystem: true 
+      label: bulk
   files:
     - path: /etc/hostname
       mode: 0644

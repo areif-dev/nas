@@ -12,7 +12,8 @@ services:
     ports:
       - 8096:8096
     volumes:
-      - ./jellyfin/config:/config:z
+      - $HOME/.config/jellyfin:/config:z
       - $HOME/.cache/jellyfin:/cache:z
-      - $HOME/Videos:/media:z
+      - /mnt/bulk/music:/music:z
+      - /mnt/bulk/videos:/videos:z
 

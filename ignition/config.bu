@@ -36,7 +36,6 @@ storage:
         - /dev/sda
         - /dev/sdb
         - /dev/sdc
-        - /dev/sdd
   filesystems:
     - device: /dev/md/bulk
       format: xfs 

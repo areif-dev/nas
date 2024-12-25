@@ -4,7 +4,9 @@ networks:
 
 services:
   jellyfin:
-    image: docker.io/jellyfin/jellyfin:latest 
+    build:
+      context: .
+      containerfile: ./jellyfin.Containerfile
     container_name: jellyfin
     restart: unless-stopped
     labels:
@@ -16,4 +18,3 @@ services:
       - $HOME/.cache/jellyfin:/cache:z
       - /mnt/bulk/music:/music:z
       - /mnt/bulk/videos:/videos:z
-

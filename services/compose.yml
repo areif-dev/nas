@@ -4,17 +4,14 @@ networks:
 
 services:
   jellyfin:
-    build:
-      context: .
-      containerfile: ./jellyfin.Containerfile
+    image: docker.io/jellyfin/jellyfin:latest
     container_name: jellyfin
     restart: unless-stopped
-    labels:
-      - 'io.containers.autoupdate=registry'
     ports:
       - 8096:8096
     volumes:
       - $HOME/.config/jellyfin:/config:z
       - $HOME/.cache/jellyfin:/cache:z
       - /mnt/bulk/music:/music:z
-      - /mnt/bulk/videos:/videos:z
+      - /mnt/bulk/movies:/movies:z
+      - /mnt/bulk/shows:/shows:z

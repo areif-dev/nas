@@ -40,6 +40,7 @@ RUN rpm-ostree install -y --allow-inactive \
 RUN rpm-ostree install -y --allow-inactive \
     bc \
     distrobox \
+    perl-Image-ExifTool \
     htop \
     neovim \
     nvtop \
@@ -47,6 +48,7 @@ RUN rpm-ostree install -y --allow-inactive \
     ranger \
     ripgrep \
     unzip \
+    yt-dlp \
     zip && \
     ostree container commit
 

@@ -45,6 +45,7 @@ RUN rpm-ostree install -y --allow-inactive \
     neovim \
     nvtop \
     openvpn \
+    python3-ytmusicapi \
     ranger \
     ripgrep \
     unzip \

@@ -91,5 +91,17 @@ services:
       -c wal_compression=on
     restart: always
 
+  audiobookshelf:
+    image: ghcr.io/advplyr/audiobookshelf:latest
+    ports:
+      - 13378:80
+    volumes:
+      - /mnt/bulk/audiobooks:/audiobooks:z
+      - /mnt/bulk/podcasts:/podcasts:z
+      - $HOME/.config/audiobookshelf:/config:z
+      - $HOME/.cache/audiobookshelf:/metadata:z
+    environment:
+      - TZ=America/New_York
+
 volumes:
   model-cache:

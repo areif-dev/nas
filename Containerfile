@@ -41,6 +41,7 @@ RUN rpm-ostree install -y --allow-inactive \
     distrobox \
     perl-Image-ExifTool \
     htop \
+    hledger \
     neovim \
     nvtop \
     openvpn \

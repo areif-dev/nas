@@ -1,0 +1,10 @@
+[Unit]
+Description=Run Fetch Ledger Prices every weekday at 17:00
+
+[Timer]
+OnCalendar=Mon..Fri 17:00
+Persistent=true
+
+[Install]
+WantedBy=timers.target
+

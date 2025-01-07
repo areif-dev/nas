@@ -1,0 +1,15 @@
+[Unit]
+Description=Fetch Ledger Prices
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/env python /mnt/bulk/syncthing/Sync/ledger-scripts/fetch-prices
+WorkingDirectory=/home/aj/Sync/ledger-scripts
+StandardOutput=append:/mnt/bulk/syncthing/Sync/prices.journal
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+

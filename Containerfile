@@ -30,7 +30,6 @@ RUN rpm-ostree install -y --allow-inactive \
     plocate \
     podman \
     podman-compose \
-    syncthing \
     tailscale \
     zsh \
     zsh-autosuggestions && \
